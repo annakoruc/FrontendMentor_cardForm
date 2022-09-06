@@ -22,10 +22,47 @@ body {
 }
 
 .cards {
-  /* direction: ; */
-  width: 30vw;
+  /* width: 600px; */
+  display: grid;
+  grid-template-areas: "card1 card1 card1 card1 ." ". card2 card2 card2 card2";
   color: rgb(255, 255, 255);
-  justify-self: center;
+  gap: 10%;
+}
+
+.card1 {
+  grid-area: card1;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.card1-items {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  padding: 5%;
+}
+
+.card-name {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.card2 {
+  grid-area: card2;
+  position: relative;
+  align-self: flex-end;
+}
+
+.card2-items {
+  position: absolute;
+  top: 45%;
+  right: 15%;
 }
 
 .userData {
@@ -38,7 +75,7 @@ body {
   height: 2.5rem;
   border: solid 1px #52327b;
   border-radius: 0.5rem;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 30px 0;
   font-size: 18px;
   padding-left: 10px;
 }
@@ -56,7 +93,7 @@ body {
   gap: 10px;
 }
 
-.title {
+.dateform {
   width: 100%;
   display: flex;
   flex-direction: column;
