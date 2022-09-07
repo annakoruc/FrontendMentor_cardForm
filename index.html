@@ -24,9 +24,9 @@
           <img src="images/bg-card-front.png" alt="card-front" />
           <img class="logo" src="images/card-logo.svg" alt="logo" />
           <div class="card1-items">
-            <h2>0000 0000 0000 0000</h2>
+            <h2 class="img-number">0000 0000 0000 0000</h2>
             <div class="card-name">
-              <p>Jane Appleseed</p>
+              <p class="img-name">Jane Appleseed</p>
               <p>00/00</p>
             </div>
           </div>
@@ -36,37 +36,44 @@
           <p class="card2-items">000</p>
         </div>
       </div>
-      <div class="userData">
+
+      <div class="user-data">
         <div>
           Cardholder Name
-          <input class="inputs" placeholder="e.g. Jane Appleseed" />
+          <input class="inputs card-user" placeholder="e.g. Jane Appleseed" />
         </div>
-        <div>
+        <div class="input-num">
           Card Number
-          <input class="inputs" placeholder="e.g. 1234 5678 9123 0000" />
+          <input
+            class="inputs card-num"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <p class="error-num">Wrong format! Numbers only!</p>
         </div>
         <div class="inputs-mini">
           <div class="dateform">
             Exp. Date (MM/YY)
             <div class="date">
-              <input class="inputs" placeholder="MM" />
-              <input class="inputs" placeholder="YY" />
+              <input class="inputs card-month" placeholder="MM" />
+              <input class="inputs card-year" placeholder="YY" />
             </div>
+            <p class="error-date">Can't be blank</p>
           </div>
-          <div class="dateform">
+          <div class="dateform cvc">
             CVC
-            <input class="inputs" placeholder="123" />
+            <input class="inputs card-cvc" placeholder="123" />
+            <p class="error-cvc">Can't be blank</p>
           </div>
         </div>
-        <button class="button">Confirm</button>
+        <button class="button confirm">Confirm</button>
       </div>
-    </div>
 
-    <!-- Completed state start -->
-    <div class="thanks">
-      <h2>Thank you!</h2>
-      <p>We've added your card details</p>
-      <button>Continue</button>
+      <!-- Completed state start -->
+      <div class="thanks">
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button class="button continue">Continue</button>
+      </div>
     </div>
 
     <div class="attribution">
@@ -76,7 +83,7 @@
       >. Coded by
       <a href="https://www.frontendmentor.io/profile/annakoruc">Anna</a>.
     </div>
-    <!-- <img src="design/active-states.jpg" alt="active-demo" width="500" /> -->
+
     <script src="script.js"></script>
   </body>
 </html>
