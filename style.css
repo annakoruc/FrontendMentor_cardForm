@@ -2,15 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-image: url(images/bg-main-desktop.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 35%;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
+}
+.background {
+  position: absolute;
+  width: 30%;
+  height: 100%;
 }
 
 .grids {
@@ -18,20 +16,22 @@ body {
   height: 95vh;
   place-items: center;
   justify-content: center;
-  gap: 10vw;
 }
 
 .cards {
-  /* width: 600px; */
   display: grid;
-  grid-template-areas: "card1 card1 card1 card1 ." ". card2 card2 card2 card2";
   color: hsl(0, 0%, 100%);
-  gap: 10%;
+  text-transform: uppercase;
+}
+
+.img-card {
+  width: 100%;
 }
 
 .card1 {
   grid-area: card1;
   position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -59,7 +59,7 @@ body {
   align-self: flex-end;
 }
 
-.card2-items {
+.img-cvc {
   position: absolute;
   top: 45%;
   right: 15%;
@@ -70,7 +70,8 @@ body {
   flex-direction: column;
   gap: 20px;
   justify-self: stretch;
-  width: 20vw;
+  width: 20%;
+  text-transform: uppercase;
 }
 
 .inputs {
@@ -78,7 +79,7 @@ body {
   height: 2.5rem;
   border: solid 1px hsl(278, 94%, 30%);
   border-radius: 0.5rem;
-  /* margin: 5px 0 30px 0; */
+  margin: 10px 0 5px 0;
   font-size: 18px;
   padding-left: 10px;
 }
@@ -114,6 +115,7 @@ body {
   border-radius: 0.5rem;
   font-size: 16px;
   color: hsl(0, 0%, 100%);
+  margin-top: 20px;
 }
 
 button:hover {
@@ -127,13 +129,20 @@ button:hover {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-  color: hsl(0, 0%, 100%);
 }
 
 .thanks {
   display: none;
   justify-self: stretch;
   width: 20vw;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.thanks h2 {
+  text-transform: uppercase;
 }
 
 .error-num,
@@ -142,4 +151,64 @@ button:hover {
   display: none;
   color: hsl(0, 100%, 66%);
   font-size: 14px;
+  text-transform: lowercase;
+}
+
+@media (width >= 375px) {
+  .background {
+    width: 100%;
+    height: 30%;
+  }
+  .grids {
+    flex-direction: column;
+    height: 90vh;
+  }
+
+  .user-data {
+    width: 90%;
+  }
+
+  .cards {
+    grid-template-areas: ". card2 card2 card2 card2 " " card1 card1 card1 card1 .";
+    padding: 0 5%;
+    height: auto;
+  }
+
+  /* .card2 {
+    top: 30%;
+  } */
+
+  .img-number {
+    font-size: 20px;
+  }
+}
+
+@media (width >= 1440px) {
+  .background {
+    width: 30%;
+    height: 100%;
+  }
+  .grids {
+    flex-direction: row;
+    gap: 10vw;
+  }
+
+  .user-data {
+    width: 20%;
+  }
+
+  .cards {
+    grid-template-areas: "card1 card1 card1 card1 ." ". card2 card2 card2 card2";
+    padding: 0;
+    gap: 10%;
+    height: auto;
+  }
+
+  .img-number {
+    font-size: 20px;
+  }
+
+  .card2 {
+    top: 0;
+  }
 }

@@ -14,29 +14,38 @@
 
     <title>Frontend Mentor | Interactive card details form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <img class="background" src="images/bg-main-desktop.png" alt="background" />
     <div class="grids">
+      <!-- Cards on left -->
       <div class="cards">
         <div class="card1">
-          <img src="images/bg-card-front.png" alt="card-front" />
+          <img
+            class="img-card"
+            src="images/bg-card-front.png"
+            alt="card-front"
+          />
           <img class="logo" src="images/card-logo.svg" alt="logo" />
           <div class="card1-items">
             <h2 class="img-number">0000 0000 0000 0000</h2>
             <div class="card-name">
               <p class="img-name">Jane Appleseed</p>
-              <p>00/00</p>
+              <p class="img-date">00/00</p>
             </div>
           </div>
         </div>
         <div class="card2">
-          <img src="images/bg-card-back.png" alt="card-back" />
-          <p class="card2-items">000</p>
+          <img class="img-card" src="images/bg-card-back.png" alt="card-back" />
+          <p class="img-cvc">000</p>
         </div>
       </div>
-
+      <!-- User data -->
       <div class="user-data">
         <div>
           Cardholder Name
@@ -70,12 +79,17 @@
 
       <!-- Completed state start -->
       <div class="thanks">
+        <img
+          class="icon-complete"
+          src="images/icon-complete.svg"
+          alt="icon-complete"
+        />
         <h2>Thank you!</h2>
         <p>We've added your card details</p>
         <button class="button continue">Continue</button>
       </div>
     </div>
-
+    <!-- Footer -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
